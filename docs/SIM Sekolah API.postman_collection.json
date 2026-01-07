@@ -1,0 +1,550 @@
+{
+	"info": {
+		"_postman_id": "d2d55a61-5920-4429-8ed6-6b8245f658a4",
+		"name": "SIM Sekolah API",
+		"description": "Dokumentasi API untuk Sistem Informasi Manajemen Sekolah. Mengelola data Siswa dan Nilai.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50508291",
+		"_collection_link": "https://danannurdiansyah7005-2373911.postman.co/workspace/1b095e3d-656e-4791-82a3-a9f39718e594/collection/50508291-d2d55a61-5920-4429-8ed6-6b8245f658a4?action=share&source=collection_link&creator=50508291"
+	},
+	"item": [
+		{
+			"name": "1. Get All Students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "## Get All Students\n\nMengambil daftar seluruh siswa untuk ditampilkan di dropdown atau komponen lain pada aplikasi klien.\n\n- **Method**: `GET`\n    \n- **URL**: `{{url}}/api/students`\n    \n- **Response Format**: `application/json`\n    \n\n### Success Response\n\n- **Status**: `200 OK`\n    \n- Contoh : {  \n    \"id\": 1,  \n    \"nis\": \"15615\",  \n    \"nama\": \"AHMAD DANANG NUR ADHIYA\",  \n    \"kelas\": \"VII A\",  \n    \"email\": \"[15615@sekolah.go.id](https://mailto:15615@sekolah.go.id)\"  \n    }"
+			},
+			"response": [
+				{
+					"name": "Success Response Get All Students",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/api/students",
+							"path": [
+								"api",
+								"students"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Jan 2026 01:16:23 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Jan 2026 01:16:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.30"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"nis\": \"15615\",\n            \"nama\": \"AHMAD DANANG NUR ADHIYA\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15615@sekolah.go.id\"\n        },\n        {\n            \"id\": 2,\n            \"nis\": \"15616\",\n            \"nama\": \"AHMAD FARHAN\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15616@sekolah.go.id\"\n        },\n        {\n            \"id\": 3,\n            \"nis\": \"15617\",\n            \"nama\": \"AHMAD JIDDAN NAUFAL ASYAUKI\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15617@sekolah.go.id\"\n        },\n        {\n            \"id\": 4,\n            \"nis\": \"15618\",\n            \"nama\": \"AISHA AMBARWATI\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15618@sekolah.go.id\"\n        },\n        {\n            \"id\": 5,\n            \"nis\": \"15619\",\n            \"nama\": \"AISYAH NURY UTAMI\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15619@sekolah.go.id\"\n        },\n        {\n            \"id\": 6,\n            \"nis\": \"15620\",\n            \"nama\": \"AJENG RIFA AZZAHRA\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15620@sekolah.go.id\"\n        },\n        {\n            \"id\": 7,\n            \"nis\": \"15621\",\n            \"nama\": \"ANA LAILATUL NGIZZATI\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15621@sekolah.go.id\"\n        },\n        {\n            \"id\": 8,\n            \"nis\": \"15622\",\n            \"nama\": \"ΑNINDHA RADITYA PRAKASITA\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15622@sekolah.go.id\"\n        },\n        {\n            \"id\": 9,\n            \"nis\": \"15623\",\n            \"nama\": \"ANNISA FITRI OKTAVIANI\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15623@sekolah.go.id\"\n        },\n        {\n            \"id\": 10,\n            \"nis\": \"15624\",\n            \"nama\": \"AZRIEL ACHMAD BAZWEDAN\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15624@sekolah.go.id\"\n        },\n        {\n            \"id\": 11,\n            \"nis\": \"15625\",\n            \"nama\": \"CHUSNI RAMADHANI\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15625@sekolah.go.id\"\n        },\n        {\n            \"id\": 12,\n            \"nis\": \"15626\",\n            \"nama\": \"EDIESTYA NUR RAHMADINA\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15626@sekolah.go.id\"\n        },\n        {\n            \"id\": 13,\n            \"nis\": \"15627\",\n            \"nama\": \"ELYSIA ANINDYA ARVIA\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15627@sekolah.go.id\"\n        },\n        {\n            \"id\": 14,\n            \"nis\": \"15628\",\n            \"nama\": \"FAREL AUREL YUSUF\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15628@sekolah.go.id\"\n        },\n        {\n            \"id\": 15,\n            \"nis\": \"15629\",\n            \"nama\": \"FINA AMALIA\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15629@sekolah.go.id\"\n        },\n        {\n            \"id\": 16,\n            \"nis\": \"15630\",\n            \"nama\": \"HASAN TAUFIQURROHΜΑΝ\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15630@sekolah.go.id\"\n        },\n        {\n            \"id\": 17,\n            \"nis\": \"15631\",\n            \"nama\": \"HENLYSKA SAMYAMARAWAT\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15631@sekolah.go.id\"\n        },\n        {\n            \"id\": 18,\n            \"nis\": \"15632\",\n            \"nama\": \"HILMI MUSTHAFA KAMIL\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15632@sekolah.go.id\"\n        },\n        {\n            \"id\": 19,\n            \"nis\": \"15633\",\n            \"nama\": \"JENDI ALPHA RISQY\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15633@sekolah.go.id\"\n        },\n        {\n            \"id\": 20,\n            \"nis\": \"15634\",\n            \"nama\": \"KHOLIDA NUR IZZATI\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15634@sekolah.go.id\"\n        },\n        {\n            \"id\": 21,\n            \"nis\": \"15635\",\n            \"nama\": \"MUHAMMAD RAFIF NUR AZIMY\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15635@sekolah.go.id\"\n        },\n        {\n            \"id\": 22,\n            \"nis\": \"15636\",\n            \"nama\": \"MUHAMMAD YUSUF SYAIFUDIN\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15636@sekolah.go.id\"\n        },\n        {\n            \"id\": 23,\n            \"nis\": \"15637\",\n            \"nama\": \"NAJMA NISHFA RAMADHANI\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15637@sekolah.go.id\"\n        },\n        {\n            \"id\": 24,\n            \"nis\": \"15638\",\n            \"nama\": \"NIPE ALNOV DIASMORO\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15638@sekolah.go.id\"\n        },\n        {\n            \"id\": 25,\n            \"nis\": \"15639\",\n            \"nama\": \"NUR AGNES ISNANINGRUM\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15639@sekolah.go.id\"\n        },\n        {\n            \"id\": 26,\n            \"nis\": \"15640\",\n            \"nama\": \"PUTRI INDAH MUTIARA\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15640@sekolah.go.id\"\n        },\n        {\n            \"id\": 27,\n            \"nis\": \"15641\",\n            \"nama\": \"RAYI FAIZA SHAHIRA\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15641@sekolah.go.id\"\n        },\n        {\n            \"id\": 28,\n            \"nis\": \"15642\",\n            \"nama\": \"REVALINA WIZETA\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15642@sekolah.go.id\"\n        },\n        {\n            \"id\": 29,\n            \"nis\": \"15643\",\n            \"nama\": \"SALWA RIZKY JASINTA PUTRI\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15643@sekolah.go.id\"\n        },\n        {\n            \"id\": 30,\n            \"nis\": \"15644\",\n            \"nama\": \"SUKMA AULIA RAMADHANI\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15644@sekolah.go.id\"\n        },\n        {\n            \"id\": 31,\n            \"nis\": \"15645\",\n            \"nama\": \"THESA MUHAMMAD RECHTO\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15645@sekolah.go.id\"\n        },\n        {\n            \"id\": 32,\n            \"nis\": \"15646\",\n            \"nama\": \"VANYA FEBY PUSPITASARI\",\n            \"kelas\": \"VII A\",\n            \"email\": \"15646@sekolah.go.id\"\n        },\n        {\n            \"id\": 33,\n            \"nis\": \"15647\",\n            \"nama\": \"ADAM FREDIYANTORO\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15647@sekolah.go.id\"\n        },\n        {\n            \"id\": 34,\n            \"nis\": \"15648\",\n            \"nama\": \"AISYA ALINA SHALSABILLA\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15648@sekolah.go.id\"\n        },\n        {\n            \"id\": 35,\n            \"nis\": \"15649\",\n            \"nama\": \"ALEXANDER MOSES AGASTYA KURNIAWAN\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15649@sekolah.go.id\"\n        },\n        {\n            \"id\": 36,\n            \"nis\": \"15650\",\n            \"nama\": \"ALEXIA MERARI ZERAHYA\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15650@sekolah.go.id\"\n        },\n        {\n            \"id\": 37,\n            \"nis\": \"15651\",\n            \"nama\": \"ΑNANDA MARSEL KURNIAWAN\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15651@sekolah.go.id\"\n        },\n        {\n            \"id\": 38,\n            \"nis\": \"15652\",\n            \"nama\": \"ARYA DIAR PRADITYA\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15652@sekolah.go.id\"\n        },\n        {\n            \"id\": 39,\n            \"nis\": \"15653\",\n            \"nama\": \"AUFA ASCHA FARICCO\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15653@sekolah.go.id\"\n        },\n        {\n            \"id\": 40,\n            \"nis\": \"15654\",\n            \"nama\": \"AULIA PUTRI KHOIRUNISA\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15654@sekolah.go.id\"\n        },\n        {\n            \"id\": 41,\n            \"nis\": \"15655\",\n            \"nama\": \"AULYA DWI PUTRI PRASETIYOWATI\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15655@sekolah.go.id\"\n        },\n        {\n            \"id\": 42,\n            \"nis\": \"15656\",\n            \"nama\": \"CLEA FAYOLA SETIAWAN\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15656@sekolah.go.id\"\n        },\n        {\n            \"id\": 43,\n            \"nis\": \"15657\",\n            \"nama\": \"DESKA RATNA JUWITA\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15657@sekolah.go.id\"\n        },\n        {\n            \"id\": 44,\n            \"nis\": \"15658\",\n            \"nama\": \"DONIY SANJAYA\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15658@sekolah.go.id\"\n        },\n        {\n            \"id\": 45,\n            \"nis\": \"15659\",\n            \"nama\": \"DWIQI AKMAL ΜΕΥΖΑ RAKΗΜΑΝ\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15659@sekolah.go.id\"\n        },\n        {\n            \"id\": 46,\n            \"nis\": \"15660\",\n            \"nama\": \"ERVINA OKTAVIA\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15660@sekolah.go.id\"\n        },\n        {\n            \"id\": 47,\n            \"nis\": \"15661\",\n            \"nama\": \"EUNIKE STEFFANY LILYASARI\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15661@sekolah.go.id\"\n        },\n        {\n            \"id\": 48,\n            \"nis\": \"15662\",\n            \"nama\": \"JIHAN YUNITERY FRANCIS ZAHRUN\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15662@sekolah.go.id\"\n        },\n        {\n            \"id\": 49,\n            \"nis\": \"15663\",\n            \"nama\": \"KAYLA RAYA TRISTAΝΙΑ\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15663@sekolah.go.id\"\n        },\n        {\n            \"id\": 50,\n            \"nis\": \"15664\",\n            \"nama\": \"KEN ABIYY NAFIS\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15664@sekolah.go.id\"\n        },\n        {\n            \"id\": 51,\n            \"nis\": \"15665\",\n            \"nama\": \"MARIO ADI PRASETYO\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15665@sekolah.go.id\"\n        },\n        {\n            \"id\": 52,\n            \"nis\": \"15666\",\n            \"nama\": \"MUHAMMAD RIZQI LATIF\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15666@sekolah.go.id\"\n        },\n        {\n            \"id\": 53,\n            \"nis\": \"15667\",\n            \"nama\": \"MUKHAMMAD ILHAM BINTANG IRAWAN\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15667@sekolah.go.id\"\n        },\n        {\n            \"id\": 54,\n            \"nis\": \"15668\",\n            \"nama\": \"NADIA DIAN SELAMAJID\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15668@sekolah.go.id\"\n        },\n        {\n            \"id\": 55,\n            \"nis\": \"15669\",\n            \"nama\": \"NISRINA AYU SAJIDAH\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15669@sekolah.go.id\"\n        },\n        {\n            \"id\": 56,\n            \"nis\": \"15670\",\n            \"nama\": \"PASYA EKA PRASETYA\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15670@sekolah.go.id\"\n        },\n        {\n            \"id\": 57,\n            \"nis\": \"15671\",\n            \"nama\": \"RATIH ANDRIYANI TRI SUKMAWATI\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15671@sekolah.go.id\"\n        },\n        {\n            \"id\": 58,\n            \"nis\": \"15672\",\n            \"nama\": \"ROZAN PUTRA RAMDANI\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15672@sekolah.go.id\"\n        },\n        {\n            \"id\": 59,\n            \"nis\": \"15673\",\n            \"nama\": \"STEVANO EXCEL PUTRA PRAMUDITYA\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15673@sekolah.go.id\"\n        },\n        {\n            \"id\": 60,\n            \"nis\": \"15674\",\n            \"nama\": \"TRI AGUSTINA\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15674@sekolah.go.id\"\n        },\n        {\n            \"id\": 61,\n            \"nis\": \"15675\",\n            \"nama\": \"VERRYANTO ZAMSON TERAMAHI\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15675@sekolah.go.id\"\n        },\n        {\n            \"id\": 62,\n            \"nis\": \"15676\",\n            \"nama\": \"YEMIMA TAMARISKA CHANDRA\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15676@sekolah.go.id\"\n        },\n        {\n            \"id\": 63,\n            \"nis\": \"15677\",\n            \"nama\": \"YOANNA VALLENCIA\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15677@sekolah.go.id\"\n        },\n        {\n            \"id\": 64,\n            \"nis\": \"15678\",\n            \"nama\": \"YUKA BILLY RIVANTO\",\n            \"kelas\": \"VII B\",\n            \"email\": \"15678@sekolah.go.id\"\n        },\n        {\n            \"id\": 65,\n            \"nis\": \"15679\",\n            \"nama\": \"AIDA FEBRY LIANA\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15679@sekolah.go.id\"\n        },\n        {\n            \"id\": 66,\n            \"nis\": \"15680\",\n            \"nama\": \"ANDHITA LINTANG RAHMADHANI\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15680@sekolah.go.id\"\n        },\n        {\n            \"id\": 67,\n            \"nis\": \"15681\",\n            \"nama\": \"ANDIKA KURNIA PUTRA\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15681@sekolah.go.id\"\n        },\n        {\n            \"id\": 68,\n            \"nis\": \"15682\",\n            \"nama\": \"ANGGARA PUTRA ANTONI\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15682@sekolah.go.id\"\n        },\n        {\n            \"id\": 69,\n            \"nis\": \"15683\",\n            \"nama\": \"ANJANI NISA ASSHABUR\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15683@sekolah.go.id\"\n        },\n        {\n            \"id\": 70,\n            \"nis\": \"15684\",\n            \"nama\": \"ARETA SYAHDA NAZHIFAH\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15684@sekolah.go.id\"\n        },\n        {\n            \"id\": 71,\n            \"nis\": \"15685\",\n            \"nama\": \"ARVA RIZQI MAULANA\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15685@sekolah.go.id\"\n        },\n        {\n            \"id\": 72,\n            \"nis\": \"15686\",\n            \"nama\": \"AUREL KINANTININGWATI\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15686@sekolah.go.id\"\n        },\n        {\n            \"id\": 73,\n            \"nis\": \"15687\",\n            \"nama\": \"BIMA SATYA ALAM\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15687@sekolah.go.id\"\n        },\n        {\n            \"id\": 74,\n            \"nis\": \"15688\",\n            \"nama\": \"DIAZ RANGGA SAPUTRA\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15688@sekolah.go.id\"\n        },\n        {\n            \"id\": 75,\n            \"nis\": \"15689\",\n            \"nama\": \"DIMAS SATRIA\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15689@sekolah.go.id\"\n        },\n        {\n            \"id\": 76,\n            \"nis\": \"15690\",\n            \"nama\": \"ELLA SAVITRI SURANTO\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15690@sekolah.go.id\"\n        },\n        {\n            \"id\": 77,\n            \"nis\": \"15691\",\n            \"nama\": \"FAISHAL ZAKY PRATAMA\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15691@sekolah.go.id\"\n        },\n        {\n            \"id\": 78,\n            \"nis\": \"15692\",\n            \"nama\": \"FERISHA PUTRI MAHARANI\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15692@sekolah.go.id\"\n        },\n        {\n            \"id\": 79,\n            \"nis\": \"15693\",\n            \"nama\": \"HERLIN ANANDA NOVATA\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15693@sekolah.go.id\"\n        },\n        {\n            \"id\": 80,\n            \"nis\": \"15694\",\n            \"nama\": \"JESICA AYU PUTRI\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15694@sekolah.go.id\"\n        },\n        {\n            \"id\": 81,\n            \"nis\": \"15695\",\n            \"nama\": \"KAYLA PUTRI MARSELIA\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15695@sekolah.go.id\"\n        },\n        {\n            \"id\": 82,\n            \"nis\": \"15696\",\n            \"nama\": \"MUHAMAD FINETO WURJAYAMUKTI\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15696@sekolah.go.id\"\n        },\n        {\n            \"id\": 83,\n            \"nis\": \"15697\",\n            \"nama\": \"MUHAMMAD AGUS MASHDAR AS - SAFAA\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15697@sekolah.go.id\"\n        },\n        {\n            \"id\": 84,\n            \"nis\": \"15698\",\n            \"nama\": \"MUHAMMAD AKBAR GOZALI\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15698@sekolah.go.id\"\n        },\n        {\n            \"id\": 85,\n            \"nis\": \"15699\",\n            \"nama\": \"MUHAMMAD BHATRIL HUDA\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15699@sekolah.go.id\"\n        },\n        {\n            \"id\": 86,\n            \"nis\": \"15700\",\n            \"nama\": \"MUHAMMAD WIJDAN SAPUTRA\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15700@sekolah.go.id\"\n        },\n        {\n            \"id\": 87,\n            \"nis\": \"15701\",\n            \"nama\": \"NATHANIA AURELI IVANA GRASA\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15701@sekolah.go.id\"\n        },\n        {\n            \"id\": 88,\n            \"nis\": \"15702\",\n            \"nama\": \"RACHEL MARVELLINO\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15702@sekolah.go.id\"\n        },\n        {\n            \"id\": 89,\n            \"nis\": \"15703\",\n            \"nama\": \"RAYA CIKAL REISTA\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15703@sekolah.go.id\"\n        },\n        {\n            \"id\": 90,\n            \"nis\": \"15704\",\n            \"nama\": \"REISYA PRATAMA\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15704@sekolah.go.id\"\n        },\n        {\n            \"id\": 91,\n            \"nis\": \"15705\",\n            \"nama\": \"ROSADEL LAILA HIWA LESTARI\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15705@sekolah.go.id\"\n        },\n        {\n            \"id\": 92,\n            \"nis\": \"15706\",\n            \"nama\": \"SAVIRA NOVEL ATTAMIMI\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15706@sekolah.go.id\"\n        },\n        {\n            \"id\": 93,\n            \"nis\": \"15707\",\n            \"nama\": \"SUCI AMALIAH\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15707@sekolah.go.id\"\n        },\n        {\n            \"id\": 94,\n            \"nis\": \"15708\",\n            \"nama\": \"SYAHLA NURHUSNA\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15708@sekolah.go.id\"\n        },\n        {\n            \"id\": 95,\n            \"nis\": \"15709\",\n            \"nama\": \"YANUAR MUHAMMAD ADIB\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15709@sekolah.go.id\"\n        },\n        {\n            \"id\": 96,\n            \"nis\": \"15710\",\n            \"nama\": \"ZAKIAH ALLODIA\",\n            \"kelas\": \"VII C\",\n            \"email\": \"15710@sekolah.go.id\"\n        },\n        {\n            \"id\": 97,\n            \"nis\": \"15711\",\n            \"nama\": \"AIRA YULIANINGRUM RIYANTO\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15711@sekolah.go.id\"\n        },\n        {\n            \"id\": 98,\n            \"nis\": \"15712\",\n            \"nama\": \"ΑΚMAL DASTA RADHITYA\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15712@sekolah.go.id\"\n        },\n        {\n            \"id\": 99,\n            \"nis\": \"15713\",\n            \"nama\": \"ALLISA ADHI YANUAR\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15713@sekolah.go.id\"\n        },\n        {\n            \"id\": 100,\n            \"nis\": \"15714\",\n            \"nama\": \"AMANDA FITRIANA\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15714@sekolah.go.id\"\n        },\n        {\n            \"id\": 101,\n            \"nis\": \"15715\",\n            \"nama\": \"ANDRYCO PERDANA\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15715@sekolah.go.id\"\n        },\n        {\n            \"id\": 102,\n            \"nis\": \"15716\",\n            \"nama\": \"ANGGUN PUSPO JATITESIH\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15716@sekolah.go.id\"\n        },\n        {\n            \"id\": 103,\n            \"nis\": \"15717\",\n            \"nama\": \"BANYU AZZUKHRUF\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15717@sekolah.go.id\"\n        },\n        {\n            \"id\": 104,\n            \"nis\": \"15718\",\n            \"nama\": \"DESBIASTI ZULIANAH\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15718@sekolah.go.id\"\n        },\n        {\n            \"id\": 105,\n            \"nis\": \"15719\",\n            \"nama\": \"DESTA RIZKI GUNAWAN\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15719@sekolah.go.id\"\n        },\n        {\n            \"id\": 106,\n            \"nis\": \"15720\",\n            \"nama\": \"DEWI PUTRI AYUNINGTYAS\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15720@sekolah.go.id\"\n        },\n        {\n            \"id\": 107,\n            \"nis\": \"15721\",\n            \"nama\": \"DHIYA' AZZA KHOIRUNNISA\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15721@sekolah.go.id\"\n        },\n        {\n            \"id\": 108,\n            \"nis\": \"15722\",\n            \"nama\": \"DINO ALVIAN HARVY\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15722@sekolah.go.id\"\n        },\n        {\n            \"id\": 109,\n            \"nis\": \"15723\",\n            \"nama\": \"FARHAN FAAT ANSORI\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15723@sekolah.go.id\"\n        },\n        {\n            \"id\": 110,\n            \"nis\": \"15724\",\n            \"nama\": \"FAUSTINE RARASATI\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15724@sekolah.go.id\"\n        },\n        {\n            \"id\": 111,\n            \"nis\": \"15725\",\n            \"nama\": \"HAFIZ AL QORNI\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15725@sekolah.go.id\"\n        },\n        {\n            \"id\": 112,\n            \"nis\": \"15726\",\n            \"nama\": \"HASTA SETIA SAPUTRA\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15726@sekolah.go.id\"\n        },\n        {\n            \"id\": 113,\n            \"nis\": \"15727\",\n            \"nama\": \"IKLILA LULU NISRINA\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15727@sekolah.go.id\"\n        },\n        {\n            \"id\": 114,\n            \"nis\": \"15728\",\n            \"nama\": \"LINTANG BAYU SUTRISNO\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15728@sekolah.go.id\"\n        },\n        {\n            \"id\": 115,\n            \"nis\": \"15729\",\n            \"nama\": \"LUNA AVRILEA LOVELYTA\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15729@sekolah.go.id\"\n        },\n        {\n            \"id\": 116,\n            \"nis\": \"15730\",\n            \"nama\": \"MEIDIANA AYU RIADIANI\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15730@sekolah.go.id\"\n        },\n        {\n            \"id\": 117,\n            \"nis\": \"15731\",\n            \"nama\": \"MUFA PUTRA RICCIE ZULFIKAR\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15731@sekolah.go.id\"\n        },\n        {\n            \"id\": 118,\n            \"nis\": \"15732\",\n            \"nama\": \"NOVA ARIYANTO\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15732@sekolah.go.id\"\n        },\n        {\n            \"id\": 119,\n            \"nis\": \"15733\",\n            \"nama\": \"OCTARINO WARDAΝΑ\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15733@sekolah.go.id\"\n        },\n        {\n            \"id\": 120,\n            \"nis\": \"15734\",\n            \"nama\": \"RAHMAT OCTA HAERULLOH\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15734@sekolah.go.id\"\n        },\n        {\n            \"id\": 121,\n            \"nis\": \"15735\",\n            \"nama\": \"RAKHA PRASETYO SAPUTRA\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15735@sekolah.go.id\"\n        },\n        {\n            \"id\": 122,\n            \"nis\": \"15736\",\n            \"nama\": \"RANGGA DWI SAPUTRA\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15736@sekolah.go.id\"\n        },\n        {\n            \"id\": 123,\n            \"nis\": \"15737\",\n            \"nama\": \"RHIKE DYAH PURWITASARI\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15737@sekolah.go.id\"\n        },\n        {\n            \"id\": 124,\n            \"nis\": \"15738\",\n            \"nama\": \"SYIFA NOVITASARI\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15738@sekolah.go.id\"\n        },\n        {\n            \"id\": 125,\n            \"nis\": \"15739\",\n            \"nama\": \"TIARA ANDJANI PUTRI\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15739@sekolah.go.id\"\n        },\n        {\n            \"id\": 126,\n            \"nis\": \"15740\",\n            \"nama\": \"WASILLATUR ROKHMAH\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15740@sekolah.go.id\"\n        },\n        {\n            \"id\": 127,\n            \"nis\": \"15741\",\n            \"nama\": \"YUNITA KURNIAWATI\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15741@sekolah.go.id\"\n        },\n        {\n            \"id\": 128,\n            \"nis\": \"15742\",\n            \"nama\": \"ZIDAN FADHILA ALFAIZ\",\n            \"kelas\": \"VIII A\",\n            \"email\": \"15742@sekolah.go.id\"\n        },\n        {\n            \"id\": 129,\n            \"nis\": \"15743\",\n            \"nama\": \"ADE MUHAMMAD SYARIFUDIN\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15743@sekolah.go.id\"\n        },\n        {\n            \"id\": 130,\n            \"nis\": \"15744\",\n            \"nama\": \"ALFA WILLYEM LAWERE BARRI\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15744@sekolah.go.id\"\n        },\n        {\n            \"id\": 131,\n            \"nis\": \"15745\",\n            \"nama\": \"ALIYA WAHYUNI\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15745@sekolah.go.id\"\n        },\n        {\n            \"id\": 132,\n            \"nis\": \"15746\",\n            \"nama\": \"ΑNA ERITA VIRA\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15746@sekolah.go.id\"\n        },\n        {\n            \"id\": 133,\n            \"nis\": \"15747\",\n            \"nama\": \"ANGGITA ABIMANYU\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15747@sekolah.go.id\"\n        },\n        {\n            \"id\": 134,\n            \"nis\": \"15748\",\n            \"nama\": \"AULYVIA FEBIANTY\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15748@sekolah.go.id\"\n        },\n        {\n            \"id\": 135,\n            \"nis\": \"15749\",\n            \"nama\": \"AURA SEKTI BUANA\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15749@sekolah.go.id\"\n        },\n        {\n            \"id\": 136,\n            \"nis\": \"15750\",\n            \"nama\": \"AVIVA SHAHIRA\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15750@sekolah.go.id\"\n        },\n        {\n            \"id\": 137,\n            \"nis\": \"15751\",\n            \"nama\": \"CLARISSA VEGA MAHESWARI\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15751@sekolah.go.id\"\n        },\n        {\n            \"id\": 138,\n            \"nis\": \"15752\",\n            \"nama\": \"DESTA ARYA EVHINO\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15752@sekolah.go.id\"\n        },\n        {\n            \"id\": 139,\n            \"nis\": \"15753\",\n            \"nama\": \"DEVI CAHAYANING UTAMI\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15753@sekolah.go.id\"\n        },\n        {\n            \"id\": 140,\n            \"nis\": \"15754\",\n            \"nama\": \"EVA OCTAVIA\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15754@sekolah.go.id\"\n        },\n        {\n            \"id\": 141,\n            \"nis\": \"15755\",\n            \"nama\": \"FAHRI DZULFIKAR SYAHPUTRO\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15755@sekolah.go.id\"\n        },\n        {\n            \"id\": 142,\n            \"nis\": \"15756\",\n            \"nama\": \"FARDAN ABYAD MAULANA\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15756@sekolah.go.id\"\n        },\n        {\n            \"id\": 143,\n            \"nis\": \"15757\",\n            \"nama\": \"FARRELL AULIA SYANDANA\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15757@sekolah.go.id\"\n        },\n        {\n            \"id\": 144,\n            \"nis\": \"15758\",\n            \"nama\": \"GHUFRON FIRDAUS\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15758@sekolah.go.id\"\n        },\n        {\n            \"id\": 145,\n            \"nis\": \"15759\",\n            \"nama\": \"HAFIDZ KHOIRUL ANAM\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15759@sekolah.go.id\"\n        },\n        {\n            \"id\": 146,\n            \"nis\": \"15760\",\n            \"nama\": \"HERJUNO BUDI MURDHIANTORO\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15760@sekolah.go.id\"\n        },\n        {\n            \"id\": 147,\n            \"nis\": \"15761\",\n            \"nama\": \"KARIMATUS SA'ADAH\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15761@sekolah.go.id\"\n        },\n        {\n            \"id\": 148,\n            \"nis\": \"15762\",\n            \"nama\": \"LAURA CAHAYA INSANI\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15762@sekolah.go.id\"\n        },\n        {\n            \"id\": 149,\n            \"nis\": \"15763\",\n            \"nama\": \"MUHAMMAD IZYAN DEANDRA\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15763@sekolah.go.id\"\n        },\n        {\n            \"id\": 150,\n            \"nis\": \"15764\",\n            \"nama\": \"MUHAMMAD JENDRA ARSYA MAHENGGA\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15764@sekolah.go.id\"\n        },\n        {\n            \"id\": 151,\n            \"nis\": \"15765\",\n            \"nama\": \"MUHAMMAD RIDWAN AL KAFFI\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15765@sekolah.go.id\"\n        },\n        {\n            \"id\": 152,\n            \"nis\": \"15766\",\n            \"nama\": \"NADIA ATFA NUR AZIZAH\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15766@sekolah.go.id\"\n        },\n        {\n            \"id\": 153,\n            \"nis\": \"15767\",\n            \"nama\": \"NAURA AZZALEA\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15767@sekolah.go.id\"\n        },\n        {\n            \"id\": 154,\n            \"nis\": \"15768\",\n            \"nama\": \"NAUZA CESAR ROHAN\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15768@sekolah.go.id\"\n        },\n        {\n            \"id\": 155,\n            \"nis\": \"15769\",\n            \"nama\": \"NICO KURNIAWAN\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15769@sekolah.go.id\"\n        },\n        {\n            \"id\": 156,\n            \"nis\": \"15770\",\n            \"nama\": \"NOVITA DEWI ARUNDANTI\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15770@sekolah.go.id\"\n        },\n        {\n            \"id\": 157,\n            \"nis\": \"15771\",\n            \"nama\": \"NUR FAIZZ\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15771@sekolah.go.id\"\n        },\n        {\n            \"id\": 158,\n            \"nis\": \"15772\",\n            \"nama\": \"NURMA AULIA CANDRA DEWI\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15772@sekolah.go.id\"\n        },\n        {\n            \"id\": 159,\n            \"nis\": \"15773\",\n            \"nama\": \"SYAIFUL ISLAM\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15773@sekolah.go.id\"\n        },\n        {\n            \"id\": 160,\n            \"nis\": \"15774\",\n            \"nama\": \"ZELIKA ZAHRA BERLIANA\",\n            \"kelas\": \"VIII B\",\n            \"email\": \"15774@sekolah.go.id\"\n        },\n        {\n            \"id\": 161,\n            \"nis\": \"15775\",\n            \"nama\": \"ALFREDA YULIAN PUTRA PRATAMA\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15775@sekolah.go.id\"\n        },\n        {\n            \"id\": 162,\n            \"nis\": \"15776\",\n            \"nama\": \"ALISYA WAHYUNINGSIH\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15776@sekolah.go.id\"\n        },\n        {\n            \"id\": 163,\n            \"nis\": \"15777\",\n            \"nama\": \"ALVIAN SAPUTRA\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15777@sekolah.go.id\"\n        },\n        {\n            \"id\": 164,\n            \"nis\": \"15778\",\n            \"nama\": \"ARJUNA SYAFAAT ABINZA\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15778@sekolah.go.id\"\n        },\n        {\n            \"id\": 165,\n            \"nis\": \"15779\",\n            \"nama\": \"ARKA WIDODO\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15779@sekolah.go.id\"\n        },\n        {\n            \"id\": 166,\n            \"nis\": \"15780\",\n            \"nama\": \"ATSNA KHILMAL' IZZAH\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15780@sekolah.go.id\"\n        },\n        {\n            \"id\": 167,\n            \"nis\": \"15781\",\n            \"nama\": \"AZZA ARHAM MAULANA\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15781@sekolah.go.id\"\n        },\n        {\n            \"id\": 168,\n            \"nis\": \"15782\",\n            \"nama\": \"AZZAHRA REFALINA PUTRI\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15782@sekolah.go.id\"\n        },\n        {\n            \"id\": 169,\n            \"nis\": \"15783\",\n            \"nama\": \"CANDRA KURNIAWAN\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15783@sekolah.go.id\"\n        },\n        {\n            \"id\": 170,\n            \"nis\": \"15784\",\n            \"nama\": \"DEVAN AKBAR KURNIAWAN\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15784@sekolah.go.id\"\n        },\n        {\n            \"id\": 171,\n            \"nis\": \"15785\",\n            \"nama\": \"DIMAR AYU RAMADHANI\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15785@sekolah.go.id\"\n        },\n        {\n            \"id\": 172,\n            \"nis\": \"15786\",\n            \"nama\": \"DJASSECA CAEZA AULIA\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15786@sekolah.go.id\"\n        },\n        {\n            \"id\": 173,\n            \"nis\": \"15787\",\n            \"nama\": \"FAJAR TOMBILANGI\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15787@sekolah.go.id\"\n        },\n        {\n            \"id\": 174,\n            \"nis\": \"15788\",\n            \"nama\": \"FARID YUSUF KURNIAWAN\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15788@sekolah.go.id\"\n        },\n        {\n            \"id\": 175,\n            \"nis\": \"15789\",\n            \"nama\": \"IDHAM SHIKI\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15789@sekolah.go.id\"\n        },\n        {\n            \"id\": 176,\n            \"nis\": \"15790\",\n            \"nama\": \"JANUAR MUHARROM\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15790@sekolah.go.id\"\n        },\n        {\n            \"id\": 177,\n            \"nis\": \"15791\",\n            \"nama\": \"KIESYA SAFFA FAGITTA\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15791@sekolah.go.id\"\n        },\n        {\n            \"id\": 178,\n            \"nis\": \"15792\",\n            \"nama\": \"MAULINA ALFIRA\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15792@sekolah.go.id\"\n        },\n        {\n            \"id\": 179,\n            \"nis\": \"15793\",\n            \"nama\": \"MUHAMMAD FARRAS NOVANTO\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15793@sekolah.go.id\"\n        },\n        {\n            \"id\": 180,\n            \"nis\": \"15794\",\n            \"nama\": \"MUHAMMAD YUSUF ADI SETYAWAN\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15794@sekolah.go.id\"\n        },\n        {\n            \"id\": 181,\n            \"nis\": \"15795\",\n            \"nama\": \"NABILA ELVARETTA AZARINE\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15795@sekolah.go.id\"\n        },\n        {\n            \"id\": 182,\n            \"nis\": \"15796\",\n            \"nama\": \"NIDJI CHOLIQ\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15796@sekolah.go.id\"\n        },\n        {\n            \"id\": 183,\n            \"nis\": \"15797\",\n            \"nama\": \"NOFA SHAFIRA\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15797@sekolah.go.id\"\n        },\n        {\n            \"id\": 184,\n            \"nis\": \"15798\",\n            \"nama\": \"RANGGA WIDYA SAPUTRA\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15798@sekolah.go.id\"\n        },\n        {\n            \"id\": 185,\n            \"nis\": \"15799\",\n            \"nama\": \"RIZQI ANWAR SAIFUDDIN\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15799@sekolah.go.id\"\n        },\n        {\n            \"id\": 186,\n            \"nis\": \"15800\",\n            \"nama\": \"ROIHANATUNNUHA LUTHFIYYAH\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15800@sekolah.go.id\"\n        },\n        {\n            \"id\": 187,\n            \"nis\": \"15801\",\n            \"nama\": \"SANDRA CALISTA\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15801@sekolah.go.id\"\n        },\n        {\n            \"id\": 188,\n            \"nis\": \"15802\",\n            \"nama\": \"SANTI EKA SARI\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15802@sekolah.go.id\"\n        },\n        {\n            \"id\": 189,\n            \"nis\": \"15803\",\n            \"nama\": \"SYAFIRA CHINTYA RAMADHANI\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15803@sekolah.go.id\"\n        },\n        {\n            \"id\": 190,\n            \"nis\": \"15804\",\n            \"nama\": \"TALENTA\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15804@sekolah.go.id\"\n        },\n        {\n            \"id\": 191,\n            \"nis\": \"15805\",\n            \"nama\": \"WINDI STIANINGSIH\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15805@sekolah.go.id\"\n        },\n        {\n            \"id\": 192,\n            \"nis\": \"15806\",\n            \"nama\": \"ZASKIA DEVI SAFITRI\",\n            \"kelas\": \"VIII C\",\n            \"email\": \"15806@sekolah.go.id\"\n        },\n        {\n            \"id\": 193,\n            \"nis\": \"15807\",\n            \"nama\": \"AFIIFAH PUTRI BILQIIS\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15807@sekolah.go.id\"\n        },\n        {\n            \"id\": 194,\n            \"nis\": \"15808\",\n            \"nama\": \"ALVIAN SETYAWAN\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15808@sekolah.go.id\"\n        },\n        {\n            \"id\": 195,\n            \"nis\": \"15809\",\n            \"nama\": \"ΑNATARIA PITAPUSPITA\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15809@sekolah.go.id\"\n        },\n        {\n            \"id\": 196,\n            \"nis\": \"15810\",\n            \"nama\": \"ANGGER PANGESTU\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15810@sekolah.go.id\"\n        },\n        {\n            \"id\": 197,\n            \"nis\": \"15811\",\n            \"nama\": \"ARKAN NAILUR RIDHO\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15811@sekolah.go.id\"\n        },\n        {\n            \"id\": 198,\n            \"nis\": \"15812\",\n            \"nama\": \"AZERA LUTFIA\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15812@sekolah.go.id\"\n        },\n        {\n            \"id\": 199,\n            \"nis\": \"15813\",\n            \"nama\": \"AZZAHRA\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15813@sekolah.go.id\"\n        },\n        {\n            \"id\": 200,\n            \"nis\": \"15814\",\n            \"nama\": \"CHEISA PUTRI HAPSARI\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15814@sekolah.go.id\"\n        },\n        {\n            \"id\": 201,\n            \"nis\": \"15815\",\n            \"nama\": \"FIRSTA TALENTA\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15815@sekolah.go.id\"\n        },\n        {\n            \"id\": 202,\n            \"nis\": \"15816\",\n            \"nama\": \"GALUH CINDIASARI\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15816@sekolah.go.id\"\n        },\n        {\n            \"id\": 203,\n            \"nis\": \"15817\",\n            \"nama\": \"INEZTA FARA AURELIA\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15817@sekolah.go.id\"\n        },\n        {\n            \"id\": 204,\n            \"nis\": \"15818\",\n            \"nama\": \"KEYSA JELITA NUR FADHILAH\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15818@sekolah.go.id\"\n        },\n        {\n            \"id\": 205,\n            \"nis\": \"15819\",\n            \"nama\": \"MUHAMMAD DARREL BAZIL KUNCORO\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15819@sekolah.go.id\"\n        },\n        {\n            \"id\": 206,\n            \"nis\": \"15820\",\n            \"nama\": \"MUHAMMAD IKHWANNUSHIFA\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15820@sekolah.go.id\"\n        },\n        {\n            \"id\": 207,\n            \"nis\": \"15821\",\n            \"nama\": \"MUHAMMAD INAF WIJAYA\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15821@sekolah.go.id\"\n        },\n        {\n            \"id\": 208,\n            \"nis\": \"15822\",\n            \"nama\": \"NADIA ELVARETTA AZARINE\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15822@sekolah.go.id\"\n        },\n        {\n            \"id\": 209,\n            \"nis\": \"15823\",\n            \"nama\": \"NAYLA OKTAVIA FITRI\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15823@sekolah.go.id\"\n        },\n        {\n            \"id\": 210,\n            \"nis\": \"15824\",\n            \"nama\": \"NIZAR IHSAN PRATAMA\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15824@sekolah.go.id\"\n        },\n        {\n            \"id\": 211,\n            \"nis\": \"15825\",\n            \"nama\": \"NUR ANJANI\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15825@sekolah.go.id\"\n        },\n        {\n            \"id\": 212,\n            \"nis\": \"15826\",\n            \"nama\": \"RAHMAT DARMAWAN\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15826@sekolah.go.id\"\n        },\n        {\n            \"id\": 213,\n            \"nis\": \"15827\",\n            \"nama\": \"REYFALDI BIMAYANA\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15827@sekolah.go.id\"\n        },\n        {\n            \"id\": 214,\n            \"nis\": \"15828\",\n            \"nama\": \"RIDHO KURNIAWAN\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15828@sekolah.go.id\"\n        },\n        {\n            \"id\": 215,\n            \"nis\": \"15829\",\n            \"nama\": \"ROBI RISTANTO\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15829@sekolah.go.id\"\n        },\n        {\n            \"id\": 216,\n            \"nis\": \"15830\",\n            \"nama\": \"SAFFA NADZIRA RAHMANΙΑ\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15830@sekolah.go.id\"\n        },\n        {\n            \"id\": 217,\n            \"nis\": \"15831\",\n            \"nama\": \"SARI\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15831@sekolah.go.id\"\n        },\n        {\n            \"id\": 218,\n            \"nis\": \"15832\",\n            \"nama\": \"SIDNEY MAULANA YUSUF\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15832@sekolah.go.id\"\n        },\n        {\n            \"id\": 219,\n            \"nis\": \"15833\",\n            \"nama\": \"SINGGIH DWI PANGESTU\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15833@sekolah.go.id\"\n        },\n        {\n            \"id\": 220,\n            \"nis\": \"15834\",\n            \"nama\": \"SYAVIRRA YASMIN\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15834@sekolah.go.id\"\n        },\n        {\n            \"id\": 221,\n            \"nis\": \"15835\",\n            \"nama\": \"SYENNIO\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15835@sekolah.go.id\"\n        },\n        {\n            \"id\": 222,\n            \"nis\": \"15836\",\n            \"nama\": \"TIARA AYU WULANDARI\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15836@sekolah.go.id\"\n        },\n        {\n            \"id\": 223,\n            \"nis\": \"15837\",\n            \"nama\": \"VALENCIA ABYASA BANYU PERMANA\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15837@sekolah.go.id\"\n        },\n        {\n            \"id\": 224,\n            \"nis\": \"15838\",\n            \"nama\": \"VIQI WAHYU UTOMO\",\n            \"kelas\": \"IX A\",\n            \"email\": \"15838@sekolah.go.id\"\n        },\n        {\n            \"id\": 225,\n            \"nis\": \"15839\",\n            \"nama\": \"ASTA NABILA ZULFA\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15839@sekolah.go.id\"\n        },\n        {\n            \"id\": 226,\n            \"nis\": \"15840\",\n            \"nama\": \"ATTIFAH DWI RISQYTA\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15840@sekolah.go.id\"\n        },\n        {\n            \"id\": 227,\n            \"nis\": \"15841\",\n            \"nama\": \"DISYA MAULIDYA AISYAH\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15841@sekolah.go.id\"\n        },\n        {\n            \"id\": 228,\n            \"nis\": \"15842\",\n            \"nama\": \"ERLAND BILLING HAKIM JAYA SINGA\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15842@sekolah.go.id\"\n        },\n        {\n            \"id\": 229,\n            \"nis\": \"15843\",\n            \"nama\": \"FARHAN ARIF HIDAYAT\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15843@sekolah.go.id\"\n        },\n        {\n            \"id\": 230,\n            \"nis\": \"15844\",\n            \"nama\": \"FATAN MUHAMMAD ROIF\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15844@sekolah.go.id\"\n        },\n        {\n            \"id\": 231,\n            \"nis\": \"15845\",\n            \"nama\": \"FRIDA ZUBAEDA\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15845@sekolah.go.id\"\n        },\n        {\n            \"id\": 232,\n            \"nis\": \"15846\",\n            \"nama\": \"GUNUNG BANYU BIRU\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15846@sekolah.go.id\"\n        },\n        {\n            \"id\": 233,\n            \"nis\": \"15847\",\n            \"nama\": \"IBRA RAZAN ESFANDIAR\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15847@sekolah.go.id\"\n        },\n        {\n            \"id\": 234,\n            \"nis\": \"15848\",\n            \"nama\": \"KHAIRUNNISA CAHYANINGTYAS\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15848@sekolah.go.id\"\n        },\n        {\n            \"id\": 235,\n            \"nis\": \"15849\",\n            \"nama\": \"KIYASAH A'SHADIEEY ROMANA PUTRI\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15849@sekolah.go.id\"\n        },\n        {\n            \"id\": 236,\n            \"nis\": \"15850\",\n            \"nama\": \"LARAS GRAHITA SIWI\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15850@sekolah.go.id\"\n        },\n        {\n            \"id\": 237,\n            \"nis\": \"15851\",\n            \"nama\": \"LAZUARDI AHMAD FAUZAN\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15851@sekolah.go.id\"\n        },\n        {\n            \"id\": 238,\n            \"nis\": \"15852\",\n            \"nama\": \"LUKMAN ANDRIANSYAH\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15852@sekolah.go.id\"\n        },\n        {\n            \"id\": 239,\n            \"nis\": \"15853\",\n            \"nama\": \"MARSELA PUTRI\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15853@sekolah.go.id\"\n        },\n        {\n            \"id\": 240,\n            \"nis\": \"15854\",\n            \"nama\": \"MARSYARIFAH EKA FAJARANI\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15854@sekolah.go.id\"\n        },\n        {\n            \"id\": 241,\n            \"nis\": \"15855\",\n            \"nama\": \"MUHAMMAD ALFINO ADI BUDIONO\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15855@sekolah.go.id\"\n        },\n        {\n            \"id\": 242,\n            \"nis\": \"15856\",\n            \"nama\": \"MUHAMMAD RASHID HASAN SADZILI\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15856@sekolah.go.id\"\n        },\n        {\n            \"id\": 243,\n            \"nis\": \"15857\",\n            \"nama\": \"NAJWA AULIA\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15857@sekolah.go.id\"\n        },\n        {\n            \"id\": 244,\n            \"nis\": \"15858\",\n            \"nama\": \"NARAYA RIZQY WIBOWO\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15858@sekolah.go.id\"\n        },\n        {\n            \"id\": 245,\n            \"nis\": \"15859\",\n            \"nama\": \"QUISYA NAHLA KINANTHI\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15859@sekolah.go.id\"\n        },\n        {\n            \"id\": 246,\n            \"nis\": \"15860\",\n            \"nama\": \"RAHMA ANJALI NARESWARI\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15860@sekolah.go.id\"\n        },\n        {\n            \"id\": 247,\n            \"nis\": \"15861\",\n            \"nama\": \"REVALINA WAHYU ANJARI\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15861@sekolah.go.id\"\n        },\n        {\n            \"id\": 248,\n            \"nis\": \"15862\",\n            \"nama\": \"RIZQI EKA FEBRYAN\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15862@sekolah.go.id\"\n        },\n        {\n            \"id\": 249,\n            \"nis\": \"15863\",\n            \"nama\": \"SALSABILA\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15863@sekolah.go.id\"\n        },\n        {\n            \"id\": 250,\n            \"nis\": \"15864\",\n            \"nama\": \"SEKAR ANGGI MAULUDIA\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15864@sekolah.go.id\"\n        },\n        {\n            \"id\": 251,\n            \"nis\": \"15865\",\n            \"nama\": \"TALITHA AS-SYIFA\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15865@sekolah.go.id\"\n        },\n        {\n            \"id\": 252,\n            \"nis\": \"15866\",\n            \"nama\": \"TEGAR PANDHU ARDHANI\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15866@sekolah.go.id\"\n        },\n        {\n            \"id\": 253,\n            \"nis\": \"15867\",\n            \"nama\": \"TISNA WIJAYA\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15867@sekolah.go.id\"\n        },\n        {\n            \"id\": 254,\n            \"nis\": \"15868\",\n            \"nama\": \"WINTANG ADWITIYA INDRA FATA\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15868@sekolah.go.id\"\n        },\n        {\n            \"id\": 255,\n            \"nis\": \"15869\",\n            \"nama\": \"ZAHIRA THALIA PARAWANSA\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15869@sekolah.go.id\"\n        },\n        {\n            \"id\": 256,\n            \"nis\": \"15870\",\n            \"nama\": \"ZASKIA NURUL ISTIQOMAH\",\n            \"kelas\": \"IX B\",\n            \"email\": \"15870@sekolah.go.id\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "2. Get All Grades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Endpoint ini digunakan untuk **mengambil rekap nilai lengkap** dengan relasi **nama siswa, guru, dan mata pelajaran (mapel)**.\n\n- **Method**: `GET`\n    \n- **Path**: `/api/grades`\n    \n\nBackend (misalnya menggunakan Laravel) sudah melakukan **join/relasi antar tabel** (siswa, guru, mapel, dan nilai), sehingga di Postman Anda hanya perlu memanggil endpoint ini dan akan langsung mendapatkan **data akhir yang sudah tergabung**.\n\n### Contoh Response (200 OK)\n\n``` json\n{\n  \"data\": [\n    {\n      \"id\": 3,\n      \"student_id\": 256,\n      \"subject_id\": 1,\n      \"teacher_id\": 1,\n      \"siswa\": \"ZASKIA NURUL ISTIQOMAH\",\n      \"nis\": \"15870\",\n      \"kelas\": \"IX B\",\n      \"mapel\": \"Matematika\",\n      \"guru\": \"Admin Guru\",\n      \"tipe_nilai\": \"UTS\",\n      \"nilai\": 89,\n      \"keterangan\": \"Sangat memuaskan\"\n    }\n  ]\n}\n\n ```"
+			},
+			"response": [
+				{
+					"name": "Success Response Get All Grades",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/api/grades",
+							"path": [
+								"api",
+								"grades"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Jan 2026 01:16:56 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Jan 2026 01:16:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.30"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 3,\n            \"student_id\": 256,\n            \"subject_id\": 1,\n            \"teacher_id\": 1,\n            \"siswa\": \"ZASKIA NURUL ISTIQOMAH\",\n            \"nis\": \"15870\",\n            \"kelas\": \"IX B\",\n            \"mapel\": \"Matematika\",\n            \"guru\": \"Admin Guru\",\n            \"tipe_nilai\": \"UTS\",\n            \"nilai\": 89,\n            \"keterangan\": \"Sangat memuaskan\"\n        },\n        {\n            \"id\": 2,\n            \"student_id\": 1,\n            \"subject_id\": 1,\n            \"teacher_id\": 1,\n            \"siswa\": \"AHMAD DANANG NUR ADHIYA\",\n            \"nis\": \"15615\",\n            \"kelas\": \"VII A\",\n            \"mapel\": \"Matematika\",\n            \"guru\": \"Admin Guru\",\n            \"tipe_nilai\": \"UTS\",\n            \"nilai\": 85,\n            \"keterangan\": \"Sangat memuaskan\"\n        },\n        {\n            \"id\": 1,\n            \"student_id\": 256,\n            \"subject_id\": 1,\n            \"teacher_id\": 1,\n            \"siswa\": \"ZASKIA NURUL ISTIQOMAH\",\n            \"nis\": \"15870\",\n            \"kelas\": \"IX B\",\n            \"mapel\": \"Matematika\",\n            \"guru\": \"Admin Guru\",\n            \"tipe_nilai\": \"UTS\",\n            \"nilai\": 85,\n            \"keterangan\": \"Sangat memuaskan\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "3. Create Grade",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"student_id\": 1,\r\n  \"subject_id\": 1,\r\n  \"teacher_id\": 1,\r\n  \"score\": 85,\r\n  \"type\": \"UTS\",\r\n  \"description\": \"Nilai murni tanpa remedial\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/grades",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"grades"
+					]
+				},
+				"description": "**Tujuan**  \nEndpoint ini digunakan untuk menambahkan data nilai baru ke database.\n\n**Method & Path**  \n`POST {{url}}/api/grades`\n\n**Body (JSON) Wajib**\n\n- `student_id` (integer): ID siswa yang akan diberi nilai.\n    \n- `subject_id` (integer): ID mata pelajaran.\n    \n- `teacher_id` (integer): ID guru pemberi nilai.\n    \n- `score` (number/integer): Nilai yang diberikan.\n    \n- `type` (string): Jenis penilaian (misal: UTS, UAS, TUGAS).\n    \n- `description` (string): Keterangan singkat mengenai nilai.\n    \n\n**Catatan**  \n`student_id`, `subject_id`, dan `teacher_id` **harus** mengacu pada record yang sudah ada di database; jika salah atau tidak ditemukan, penyimpanan nilai dapat gagal."
+			},
+			"response": [
+				{
+					"name": "Success Response Create Grade",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"student_id\": 10,\r\n  \"subject_id\": 1,\r\n  \"teacher_id\": 1,\r\n  \"score\": 85,\r\n  \"type\": \"UTS\",\r\n  \"description\": \"Sangat memuaskan!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/grades",
+							"path": [
+								"api",
+								"grades"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Jan 2026 01:28:06 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Jan 2026 01:28:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.30"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"student_id\": 10,\n        \"subject_id\": 1,\n        \"teacher_id\": 1,\n        \"siswa\": \"AZRIEL ACHMAD BAZWEDAN\",\n        \"nis\": \"15624\",\n        \"kelas\": \"VII A\",\n        \"mapel\": \"Matematika\",\n        \"guru\": \"Admin Guru\",\n        \"tipe_nilai\": \"UTS\",\n        \"nilai\": 85,\n        \"keterangan\": \"Sangat memuaskan!\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "4. Get Grade Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/grades/4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"grades",
+						"4"
+					]
+				},
+				"description": "Digunakan untuk melihat detail satu nilai berdasarkan ID untuk keperluan Edit.\n\n**Path Parameter:**\n\n- `id` - ID dari record nilai yang ingin dilihat detailnya\n    \n\n**Response 200 (Success):** Mengembalikan objek data yang berisi informasi lengkap nilai siswa termasuk:\n\n- `id` - ID nilai\n    \n- `student_id` - ID siswa\n    \n- `subject_id` - ID mata pelajaran\n    \n- `teacher_id` - ID guru\n    \n- `siswa` - Nama siswa\n    \n- `nis` - Nomor Induk Siswa\n    \n- `kelas` - Kelas siswa\n    \n- `mapel` - Nama mata pelajaran\n    \n- `guru` - Nama guru\n    \n- `tipe_nilai` - Tipe nilai (UTS/UAS)\n    \n- `nilai` - Nilai numerik\n    \n- `keterangan` - Keterangan nilai"
+			},
+			"response": [
+				{
+					"name": "Success Response Get Grade Detail",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/api/grades/4",
+							"path": [
+								"api",
+								"grades",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Jan 2026 02:00:08 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Jan 2026 02:00:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.30"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"student_id\": 10,\n        \"subject_id\": 1,\n        \"teacher_id\": 1,\n        \"siswa\": \"AZRIEL ACHMAD BAZWEDAN\",\n        \"nis\": \"15624\",\n        \"kelas\": \"VII A\",\n        \"mapel\": \"Matematika\",\n        \"guru\": \"Admin Guru\",\n        \"tipe_nilai\": \"UTS\",\n        \"nilai\": 85,\n        \"keterangan\": \"Sangat memuaskan!\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "5. Update Grade",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/grades/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"grades",
+						"1"
+					]
+				},
+				"description": "Digunakan untuk mengupdate data nilai siswa berdasarkan ID.\n\n**Path Parameter:**\n\n- `id` - ID dari record nilai yang ingin diupdate\n    \n\n**Request Body:** Kirim data dalam format JSON dengan field yang ingin diupdate:\n\n- `student_id` - ID siswa\n    \n- `subject_id` - ID mata pelajaran\n    \n- `teacher_id` - ID guru\n    \n- `tipe_nilai` - Tipe nilai (UTS/UAS)\n    \n- `nilai` - Nilai numerik\n    \n\n**Response 200 (Success):** Mengembalikan objek data yang berisi informasi nilai yang telah diupdate beserta pesan sukses."
+			},
+			"response": [
+				{
+					"name": "Success Response Update Grade",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"student_id\": 10,\r\n  \"subject_id\": 1,\r\n  \"teacher_id\": 1,\r\n  \"score\": 90,\r\n  \"type\": \"UTS\",\r\n  \"description\": \"Sangat memuaskan!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/api/grades/1",
+							"path": [
+								"api",
+								"grades",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Jan 2026 01:54:43 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Jan 2026 01:54:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.30"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"student_id\": 10,\n        \"subject_id\": 1,\n        \"teacher_id\": 1,\n        \"siswa\": \"AZRIEL ACHMAD BAZWEDAN\",\n        \"nis\": \"15624\",\n        \"kelas\": \"VII A\",\n        \"mapel\": \"Matematika\",\n        \"guru\": \"Admin Guru\",\n        \"tipe_nilai\": \"UTS\",\n        \"nilai\": 90,\n        \"keterangan\": \"Sangat memuaskan!\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "6. Delete Grade",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/grades/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"grades",
+						"1"
+					]
+				},
+				"description": "## Hapus Data Nilai\n\nEndpoint ini digunakan untuk **menghapus data nilai secara permanen** berdasarkan ID.\n\n### Path Parameter\n- `:id` (integer, required) - ID unik dari data nilai yang akan dihapus\n\n### Response Sukses\n- **Status Code:** 200 OK\n- Data nilai berhasil dihapus dari sistem"
+			},
+			"response": [
+				{
+					"name": "Success Response Delete Grade",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "/api/grades/4",
+							"path": [
+								"api",
+								"grades",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Jan 2026 02:01:55 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 07 Jan 2026 02:01:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.30"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Data nilai berhasil dihapus\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": ""
+		}
+	]
+}
