@@ -1,64 +1,102 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# 🛠️ Backend API - SIM Sekolah
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Repository ini berisi source code **Web Service (RESTful API)** untuk Sistem Informasi Manajemen Sekolah. Aplikasi ini dibangun menggunakan Framework **Laravel** dan berfungsi sebagai penyedia data (Server-side) untuk aplikasi Frontend.
 
-## About Laravel
+Proyek ini dibuat untuk memenuhi tugas mata kuliah Pemrograman Web / Tugas Akhir.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Teknologi
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* **Framework:** Laravel 10.x / 11.x
+* **Bahasa:** PHP 8.1+
+* **Database:** MySQL / MariaDB
+* **Authentication:** Laravel Sanctum (Token Based)
+* **API Resource:** JsonResource untuk format response standar.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## ✨ Fitur API
 
-## Learning Laravel
+1.  **Autentikasi (Auth):**
+    * Login (Mendapatkan Bearer Token).
+    * Logout (Menghapus Token).
+2.  **Manajemen Siswa (Students):**
+    * Menampilkan daftar siswa (untuk dropdown).
+    * Relasi ke Tabel User & Kelas.
+3.  **Manajemen Nilai (Grades):**
+    * **CRUD Lengkap** (Create, Read, Update, Delete).
+    * **Eager Loading:** Data nilai otomatis memuat nama siswa, nama guru, dan nama mapel dalam satu request (mengoptimalkan performa).
+4.  **Validasi Data:**
+    * Mencegah input nilai negatif atau di atas 100.
+    * Memastikan ID siswa/guru valid sebelum disimpan.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 📦 Daftar Endpoint (API Routes)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Berikut adalah daftar URL yang tersedia untuk diakses oleh Frontend/Postman:
 
-## Laravel Sponsors
+| Method | Endpoint | Deskripsi | Auth Wajib? |
+| :--- | :--- | :--- | :--- |
+| `POST` | `/api/login` | Login Admin/Guru | Tidak |
+| `POST` | `/api/logout` | Logout sistem | Ya |
+| `GET` | `/api/students` | Ambil semua data siswa | Tidak |
+| `GET` | `/api/grades` | Ambil semua data nilai | Tidak |
+| `POST` | `/api/grades` | Input nilai baru | Tidak* |
+| `GET` | `/api/grades/{id}` | Lihat detail 1 nilai | Tidak |
+| `PUT` | `/api/grades/{id}` | Update data nilai | Tidak* |
+| `DELETE` | `/api/grades/{id}` | Hapus data nilai | Tidak* |
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+*> Catatan: Authentication middleware dapat diaktifkan di `routes/api.php` jika diperlukan.*
 
-### Premium Partners
+## ⚙️ Cara Instalasi (Localhost)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Ikuti langkah ini jika Anda ingin menjalankan project ini di komputer baru:
 
-## Contributing
+1.  **Clone Repository**
+    ```bash
+    git clone [https://github.com/USERNAME_ANDA/NAMA_REPO.git](https://github.com/USERNAME_ANDA/NAMA_REPO.git)
+    cd NAMA_REPO
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2.  **Install Dependencies**
+    Wajib menjalankan Composer untuk mengunduh library Laravel.
+    ```bash
+    composer install
+    ```
 
-## Code of Conduct
+3.  **Setup Environment**
+    Duplikat file `.env.example` menjadi `.env`.
+    ```bash
+    cp .env.example .env
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4.  **Generate Key**
+    ```bash
+    php artisan key:generate
+    ```
 
-## Security Vulnerabilities
+5.  **Konfigurasi Database**
+    Buka file `.env`, lalu sesuaikan setting database Anda:
+    ```env
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=nama_database_anda
+    DB_USERNAME=root
+    DB_PASSWORD=
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6.  **Migrasi & Seeder (PENTING)**
+    Jalankan perintah ini untuk membuat tabel dan mengisi data dummy (Siswa, Guru, Mapel).
+    ```bash
+    php artisan migrate:fresh --seed
+    ```
 
-## License
+7.  **Jalankan Server**
+    ```bash
+    php artisan serve
+    ```
+    API akan berjalan di: `http://127.0.0.1:8000`
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📝 Dokumentasi Postman
+
+File koleksi Postman untuk pengujian API ini disertakan dalam folder `docs/` (jika ada) atau dapat diminta kepada pengembang.
+
+---
+**Dibuat oleh:** DANAN NURDIANSYAH 24.01.53.7005 SEBAGAI TUGAS UAS WEBSERVICE
